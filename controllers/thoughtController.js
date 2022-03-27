@@ -50,5 +50,20 @@ module.exports = {
                     : res.json('Thought succesfully deleted!')
             )
             .catch((err) => res.status(500).json(err));
+    },
+    addReaction(req, res) {
+        Thought.findOneAndUpdate(
+            { _id: req.params.thoughtId },
+            { reactions: req.body },
+            { runValidators: true, new: true }
+        )
+            .then((thought) => 
+                !thought
+                    ? res
+                        .status(404)
+                        .json({ message: 'No thought found with that ID :('})
+                    : res.json(thought)
+            )
+            .catch((err) => res.status(500).json(err));
     }
 }
