@@ -59,7 +59,12 @@ module.exports = {
             .then((thought) => 
                 !thought
                     ? res.status(404).json({ message: 'No thought with that ID'})
-                    : res.json('Thought succesfully deleted!')
+                    : User.findOneAndUpdate(
+                        { username: thought.username },
+                        { $pull: { thoughts: thought._id} },
+                        { runValidators: true, new: true }
+                    )
+                        .then(() => res.json('Thought succesfully deleted!'))
             )
             .catch((err) => res.status(500).json(err));
     },
