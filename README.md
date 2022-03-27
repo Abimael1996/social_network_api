@@ -21,6 +21,11 @@ In order to install dependencies, run the following command:
     
 Once you install the dependencies, run "npm start" to connect to the API server, then you can test each one of the routes on Insomnia. Navigate to the routes/api folder to see the routes. Refer to the files in the Models folder to see how to post the information.
 
+The following video demonstrates the process of making API requests.
+
+[![Watch the video](./images/videoscreenshot.png)](https://www.youtube.com/watch?v=gXLv9AkNx2E)
+
+
 ## Contribute
     
 If you would like to contribute to this project, feel free to make a pull request.
