@@ -1,4 +1,4 @@
-const { Thought } = require('../models/index');
+const { Thought, User } = require('../models/index');
 
 module.exports = {
     getThoughts(req, res) {
@@ -26,8 +26,20 @@ module.exports = {
     },
     createThought(req, res) {
         Thought.create(req.body)
-            .then((thought) => res.json(thought))
-            .catch((err) => res.status(500).json(err));
+            .then((thought) => 
+                 User.findOneAndUpdate(
+                     { _id: req.body.userId },
+                     { $push: { thoughts: thought._id } },
+                     { runValidators: true, new: true }
+                 )
+                     .then((user) => 
+                         !user
+                             ? res
+                                 .status(404)
+                                 .json({ message: 'Thought created but no user found'})
+                             : res.json(thought)    
+                    )
+                    .catch((err) => res.status(500).json(err)));
     },
     updateThought(req, res) {
         Thought.findOneAndUpdate(
