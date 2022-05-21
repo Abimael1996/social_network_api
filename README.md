@@ -5,12 +5,16 @@
 This is an API for a social network where users can post thoughts, add/remove friends, and post reactions on other's posts. It was built by using Express.js for routing, a MongoDB database, and the Mongoose ODM.
     
 ## Table of Contents
-    
+
+- [Technologies](#technologies)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Technologies](#technologies)
 - [Contribute](#contribute)
 - [Questions](#questions)
+
+## Technologies
+
+MongoDB | Mongoose | Node.js | Express.js | JavaScript  
     
 ## Installation
 
@@ -25,10 +29,6 @@ Once you install the dependencies, run "npm start" to connect to the API server,
 The following video demonstrates the process of making API requests.
 
 [![Watch the video](./images/videoscreenshot.png)](https://www.youtube.com/watch?v=gXLv9AkNx2E)
-
-## Technologies
-
-MongoDB | Mongoose | Node.js | Express.js | JavaScript  
 
 ## Contribute
     
