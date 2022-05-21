@@ -8,6 +8,7 @@ This is an API for a social network where users can post thoughts, add/remove fr
     
 - [Installation](#installation)
 - [Usage](#usage)
+- [Technologies](#technologies)
 - [Contribute](#contribute)
 - [Questions](#questions)
     
@@ -25,6 +26,9 @@ The following video demonstrates the process of making API requests.
 
 [![Watch the video](./images/videoscreenshot.png)](https://www.youtube.com/watch?v=gXLv9AkNx2E)
 
+## Technologies
+
+MongoDB | Mongoose | Node.js | Express.js | JavaScript  
 
 ## Contribute
     
